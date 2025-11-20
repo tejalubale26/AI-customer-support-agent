@@ -36,8 +36,10 @@ This project demonstrates how modern enterprise support systems can process user
 ```mermaid
 flowchart TD
 
+%% ========== INPUT LAYER ==========
 A[Input Layer\n(User Query via Gradio UI)] --> B[Preprocessing & Utilities]
 
+%% ========== PREPROCESSING ==========
 B --> C1[Text Cleaning]
 B --> C2[Document Chunking]
 B --> C3[Embedding Generation]
@@ -46,27 +48,36 @@ C1 --> D[FAISS Vector Store]
 C2 --> D
 C3 --> D
 
+%% ========== FAISS STORE ==========
 D --> H[Retrieval Agent]
 
+%% ========== INTENT CLASSIFICATION ==========
 A --> E[Intent Classification Agent]
 E --> J[Orchestrator]
 
+%% ========== RETRIEVAL AGENT ==========
 H --> J
 
+%% ========== RESPONSE GENERATOR ==========
 J --> F[Response Generator\n(Gemini 1.5)]
 F --> J
 
+%% ========== EVALUATION AGENT ==========
 J --> G[Evaluation Agent]
 G --> J
 
+%% ========== ESCALATION AGENT ==========
 J --> I[Escalation Agent]
 I --> J
 
+%% ========== SESSION MEMORY ==========
 J --> K[Session Memory]
 K --> J
 
+%% ========== FINAL OUTPUT ==========
 J --> L[Final Output\n(Intent + Context + Response + Score + Escalation)]
 L --> M[Displayed in Gradio UI]
+
 ```
 
 ---
