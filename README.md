@@ -1,3 +1,4 @@
+<img width="996" height="520" alt="Screenshot 2025-11-19 234056" src="https://github.com/user-attachments/assets/38b09d2d-e266-4d2a-a8a8-f86e1c2a5398" />
 
 # 📞 **AI Customer Support Agent**
 
@@ -16,6 +17,9 @@ The **AI Customer Support Agent** is an end-to-end intelligent support system de
 
 This project demonstrates how modern enterprise support systems can process user queries, classify intent, retrieve knowledge, generate accurate responses, evaluate correctness, and escalate critical issues — all automatically.
 
+<img width="979" height="545" alt="Screenshot 2025-11-20 001759" src="https://github.com/user-attachments/assets/310bd0b3-05b8-494e-829d-acd66d01e952" />
+
+
 ---
 
 ## 🚀 **Key Features**
@@ -29,56 +33,13 @@ This project demonstrates how modern enterprise support systems can process user
 ✔ **Simple Gradio UI** for interaction
 ✔ **Modular, extensible architecture**
 
+<img width="542" height="303" alt="Screenshot 2025-11-20 003515" src="https://github.com/user-attachments/assets/aff26523-f227-4a15-b7a6-9fa8933ad01d" />
+
 ---
 
 ## 🧠 **System Architecture**
 
-```mermaid
-flowchart TD
 
-%% ========== INPUT LAYER ==========
-A[Input Layer\n(User Query via Gradio UI)] --> B[Preprocessing & Utilities]
-
-%% ========== PREPROCESSING ==========
-B --> C1[Text Cleaning]
-B --> C2[Document Chunking]
-B --> C3[Embedding Generation]
-
-C1 --> D[FAISS Vector Store]
-C2 --> D
-C3 --> D
-
-%% ========== FAISS STORE ==========
-D --> H[Retrieval Agent]
-
-%% ========== INTENT CLASSIFICATION ==========
-A --> E[Intent Classification Agent]
-E --> J[Orchestrator]
-
-%% ========== RETRIEVAL AGENT ==========
-H --> J
-
-%% ========== RESPONSE GENERATOR ==========
-J --> F[Response Generator\n(Gemini 1.5)]
-F --> J
-
-%% ========== EVALUATION AGENT ==========
-J --> G[Evaluation Agent]
-G --> J
-
-%% ========== ESCALATION AGENT ==========
-J --> I[Escalation Agent]
-I --> J
-
-%% ========== SESSION MEMORY ==========
-J --> K[Session Memory]
-K --> J
-
-%% ========== FINAL OUTPUT ==========
-J --> L[Final Output\n(Intent + Context + Response + Score + Escalation)]
-L --> M[Displayed in Gradio UI]
-
-```
 <img width="1666" height="519" alt="Screenshot 2025-11-20 180738" src="https://github.com/user-attachments/assets/8461947d-a844-4d76-80a0-993da8c7b381" />
 
 ---
@@ -155,6 +116,8 @@ Once the app starts, you can:
    * Whether **escalation** is required
 3. Explore multiple queries in a session — context is preserved.
 
+<img width="556" height="467" alt="Screenshot 2025-11-20 004606" src="https://github.com/user-attachments/assets/9684eaa9-aaa8-4a77-a037-b326961bdd7c" />
+
 ---
 
 ## 🗂️ **Knowledge Base Structure**
@@ -193,6 +156,8 @@ C4 --> D1 --> D2
 * 🤖 Auto-training from conversation logs
 * 🔍 Advanced analytics dashboard
 * 🧩 Integrations with CRM / ticketing systems
+
+<img width="799" height="453" alt="Screenshot 2025-11-20 010449" src="https://github.com/user-attachments/assets/686a5975-3eb5-46fc-b6bf-c0d1ee3ca85c" />
 
 ---
 
