@@ -79,6 +79,7 @@ J --> L[Final Output\n(Intent + Context + Response + Score + Escalation)]
 L --> M[Displayed in Gradio UI]
 
 ```
+<img width="1666" height="519" alt="Screenshot 2025-11-20 180738" src="https://github.com/user-attachments/assets/8461947d-a844-4d76-80a0-993da8c7b381" />
 
 ---
 
